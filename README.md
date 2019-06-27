@@ -47,3 +47,24 @@ Once you've configured the template, you will have an app that is able to:
 10. The line below, `public static String POSTS_TAB = "Showcase";` determines the name of the blog tab. You can change it to whatever you like. If you have put the line above to false, it will be ignored.
 11. Lastly, the line `public static String[] PAGE_TABS = {"features", "questions", "contact"};` is where you select which WordPress content should be loaded in your tabs. PressToAndroid uses the 'slug' names you've configured in WordPress as the tab names. So make sure the references you add here actually exists as page slugs on your WordPress site. You can add upto 4, and they will use the icons you added before under 'TAB_ICONS'.
 12. You are done! You can now run the app again as per step 3 and you should see your very own content rendered as a native app. Any content changes you want to make can just be handled from your WordPress admin. 
+
+## Additional customization
+
+We've added some additional customization options for you. The following options are available:
+
+* USE_LAZY_LOADING determines how to render your blog content. If set to true and you have a lot of articles, it will only load articles in batches, and as the user scrolls down additional content will be loaded. If set to false all blog content will be loaded whenever the app opens.
+* LOAD_LINKS_EXTERNALLY determines how the app will treat hyperlinks in your content. If set to true, whenever the user clicks on a link, the app will open the default browser or app on the phone to open the content. If set to false, the app will load all content as if it is part of your app.
+* REMOVE_WEBTITLE_CONTENT_AFTER_LAST_DASH keeps titles short. Any HTML titles displayed within the app will be limited to the last dash. Say the title of a certain page is 'About Us - MyWordpress Site Title', it will only display as 'About Us' in the app.
+* Lastly, WEB_ELEMENTS_TO_REMOVE determines how the app should render your wordpress content. In order to make your wordpress more 'app-like' we remove elements such as headers, footers and sidebars so the content looks native to the app. If you see any content on your pages you want to remove, you can simply add their css classes here as `.put("<parent class name>","<child class name>");`. Alternatively if you want to keep certain content that the app removes by default, just delete the .put that mentions those classes.
+
+## Advanced features
+
+We are an app development agency that was hired by a client to create a native app off their WordPress. We decided to make the basic Android source code available under GNU so it would be easy for everyone to do the same. We can however support you if you want more advanced customizations. Some of the features we've built are:
+
+* **In-app billing:** You can limit access to tabs or posts based on payment. You can use either one-time purchases or subscriptions to sell your users premium content. The app will ask the user to make a purchase through Google Play Billing before showing the content. We've developed a WordPress plugin that makes it easy for you to mark content as premium from your WordPress admin. Get in touch with us if you would like to use this functionality. 
+
+* **Push Notifications:** You can send your users push notifications whenever new content is available. We've integrated this solution with Google Firebase and can even develop a push notification interface that you can control via WordPress. Get in touch if interested.
+
+* **PressToiOS:** We've ported this framework to iOS. Because Apple is quite particular in their app review process and has specifically mentioned rejection criteria around 'repackaged websites' and 'template-based apps' we are a bit hesitant to make this open source. We've successfully released apps using our framework and want to prevent other people submitting 'bad' apps for review using this framework and then being flagged by Apple whenever their implementation doesn't meet App Review standards. This could lead to it becoming more difficult for us to get approved whenever we use the framework. If you would like to release your WordPress content on iOS please get in touch with us directly and we can see if we can support you.
+
+You can get in touch directly via GitHub or https://presstoapp.com
