@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">PressToAndroid</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="no_connection_title">No internet connection</string>
+    <string name="no_connection_message">You are offline. You can only view this content with an active internet connection.</string>
+    <string name="retry_button_text">Retry</string>
+    <string name="close_button_text">Close</string>
+    <string name="buy_button_text">Buy Single Access</string>
+    <string name="purchase_options_button_text">See Purchase Options</string>
+
+    <string name="loading_text">Loading</string>
+    <string name="no_blog_content_title">No content</string>
+    <string name="no_blog_content_message">No content was found.</string>
+    <string name="premium_content_title">Premium content</string>
+    <string name="premium_content_message_with_consumable_and_other">Please purchase access to this area. You can pay a single fee of $0.99 to view this content once, or discover other purchasing options below.</string>
+    <string name="premium_content_message_with_only_consumable">Please purchase access to this area. You will be charged a single fee of $0.99 to view this content once.</string>
+    <string name="premium_content_message_without_consumable">Please purchase access to this area.</string>
+    <string name="saved_preferences">Saved Preferences</string>
+    <string name="saved_tab">Saved Tab</string>
+    <string name="no_cache_title">Offline page invalid</string>
+    <string name="no_cache_message">This content needs to be reloaded from the internet.</string>
+    <string name="reload_button_text">Reload</string>
+    <string name="exit_title">Close</string>
+    <string name="exit_message">Do you want to close the app?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="no_license_title">No valid license</string>
+    <string name="no_license_text">The app developer needs a license to provide this app. If you are the app developer, please visit https://presstoapp.com to purchase a license.</string>
+    <string name="activate_license_title">Activate license?</string>
+    <string name="activate_license_text">Your license has not been activated yet. It can only be activated once for 1 domain. Do you want to activate your license for </string>
+
+
+</resources>
