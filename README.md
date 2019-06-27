@@ -4,6 +4,10 @@
 
 PressToAndroid is a framework that allows you to easily package an existing WordPress site into an app. It can grab the content from any WordPress site that has enabled the [WordPress REST API](https://developer.wordpress.org/rest-api/). It then repackages up to 4 pages into native app tabs, and renders any blog posts into a dedicated 'Newsfeed' experience, similar to Facebook or Instagram. You don't need to understand any Java or Android concepts to use this framework, all options have been simplified into a single 'Configuration' class. If you do understand Java/Android you are free to fork and use, expand or change this framework for your own purposes under the [GNU General Public License] (https://www.gnu.org/licenses/gpl-3.0.en.html)
 
+![screenshot 1](https://presstoapp.com/wp-content/uploads/2018/09/Screenshot_1537444408-169x300.png "Screenshot 1")
+![screenshot 2](https://presstoapp.com/wp-content/uploads/2018/09/Screenshot_1537444694-169x300.png "Screenshot 2")
+![screenshot 3](https://presstoapp.com/wp-content/uploads/2018/09/Screenshot_1537444642-169x300.png "Screenshot 3")
+
 ## Requirements
 
 1. A working WordPress instance available on a publicly accessible domain name or IP address
