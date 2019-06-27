@@ -2,30 +2,31 @@
 
 ## Introduction
 
-PressToAndroid is a framework that allows you to easily package an existing WordPress site into an app. It can grab the content of any WordPress site that has enabled the [WordPress REST API](https://developer.wordpress.org/rest-api/). It then repackages up to 4 pages into native app tabs, and renders any blog posts into a dedicted 'Newsfeed' experience, similar to Facebook or Instagram. You don't need to understand any Java or Android concepts to use this framework, all options have been simplified into a single 'Configuration' class. If you do understand Java/Android you are free to fork and use, expand or change this framework for your own purposes under the [GNU General Public License] (https://www.gnu.org/licenses/gpl-3.0.en.html)
+PressToAndroid is a framework that allows you to easily package an existing WordPress site into an app. It can grab the content from any WordPress site that has enabled the [WordPress REST API](https://developer.wordpress.org/rest-api/). It then repackages up to 4 pages into native app tabs, and renders any blog posts into a dedicated 'Newsfeed' experience, similar to Facebook or Instagram. You don't need to understand any Java or Android concepts to use this framework, all options have been simplified into a single 'Configuration' class. If you do understand Java/Android you are free to fork and use, expand or change this framework for your own purposes under the [GNU General Public License] (https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 ## Requirements
 
 1. A working WordPress instance available on a publicly accessible domain name or IP address
 2. A working WordPress REST API enabled on your WordPress instance. This tends to be enabled by default on a general vanilla WordPress installation. Certain hosting providers have disabled this when they try to sell specific WordPress plans or add-on services, but if you have a clean WordPress installation running on a normal general purpose webserver this should work.
 3. A WordPress Theme that renders nicely on mobile devices. PressToAndroid will automatically remove headers, footers and sidebars to only render the general content, but it still helps to design your pages and posts in a way that they will look nice on mobile devices.
-4. Your own app icon and a Google Play Developer account if you intend to distribute this app to users via the Google Play Store. 
+4. Your own app icon and a Google Play Developer account if you intend to distribute this app to users via the Google Play Store.
+5. Android Studio to open and configure the project.
 
 ## Features
 
 Once you've configured the template, you will have an app that is able to:
 
-* Display up to 4 pages hosted by your WordPress. Whenever you change the content of the pages, they will automatically update in the app the next time the app is opened and connected to the internet
-* Display any blog posts you publish through a dedicated 'Newsfeed' experience, whenever the app is connected to the internet
+* Display up to 4 pages hosted by your WordPress. Whenever you change the content of the pages through the WordPress admin, they will automatically update in the app the next time the app is opened and connected to the internet.
+* Display any blog posts you publish through a dedicated 'Newsfeed' experience, whenever the app is connected to the internet.
 * Display any pages previously loaded offline when the device does not have access to the internet. 
 * Any external HTML links within your Pages or Posts can either open using the default browser on the device (or dedicated apps for content links such as Facebook, YouTube, Instagram, etc.) or they can open within the App as in-app views.
-* The basic template is a fully native Android binary, so you can add any Gradle plugins or native features you see fit. All WordPress content is loaded in an Android fragment using a WebView.
+* The basic template is a fully native Android binary, so you can add any Gradle plugins or native features you see fit. All WordPress content is loaded in Android fragments using a WebView.
 
 ## Instructions
 
 1. Download the source code and open the root directory in Android Studio.
 2. Wait for gradle to complete syncing
-3. You can test whether the app works correctly by pressing the play button or 'Run' > 'Run 'app''. You should be able to run it on an android device or simulator and see some sample PressToApp content.
+3. You can test whether the app works correctly by pressing the play button or 'Run' > 'Run 'app''. You should be able to run it on an Android device or simulator and see some sample PressToApp content.
 4. Now you're ready to adapt the framework to your website. Open AndroidManifest.xml under 'app/manifests'
 5. You'll see `package="net.rdcmedia.presstoandroid"` on line 4. This is the package name. It needs to be changed to whatever domain your website is, to ensure everyone that submits this package to Google Play has a unique identifier. 
    * Let's assume your domain is mywordpress.com. 
@@ -55,11 +56,11 @@ We've added some additional customization options for you. The following options
 * USE_LAZY_LOADING determines how to render your blog content. If set to true and you have a lot of articles, it will only load articles in batches, and as the user scrolls down additional content will be loaded. If set to false all blog content will be loaded whenever the app opens.
 * LOAD_LINKS_EXTERNALLY determines how the app will treat hyperlinks in your content. If set to true, whenever the user clicks on a link, the app will open the default browser or app on the phone to open the content. If set to false, the app will load all content as if it is part of your app.
 * REMOVE_WEBTITLE_CONTENT_AFTER_LAST_DASH keeps titles short. Any HTML titles displayed within the app will be limited to the last dash. Say the title of a certain page is 'About Us - MyWordpress Site Title', it will only display as 'About Us' in the app.
-* Lastly, WEB_ELEMENTS_TO_REMOVE determines how the app should render your wordpress content. In order to make your wordpress more 'app-like' we remove elements such as headers, footers and sidebars so the content looks native to the app. If you see any content on your pages you want to remove, you can simply add their css classes here as `.put("<parent class name>","<child class name>");`. Alternatively if you want to keep certain content that the app removes by default, just delete the .put that mentions those classes.
+* Lastly, WEB_ELEMENTS_TO_REMOVE determines how the app should render your WordPress content. In order to make your WordPress more 'app-like' we remove elements such as headers, footers and sidebars so the content looks native to the app. If you see any content on your pages you want to remove, you can simply add their CSS classes here as `.put("<parent class name>","<child class name>");`. Alternatively if you want to keep certain content that the app removes by default, just delete the '.put' that mentions those classes.
 
 ## Advanced features
 
-We are an app development agency that was hired by a client to create a native app off their WordPress. We decided to make the basic Android source code available under GNU so it would be easy for everyone to do the same. We can however support you if you want more advanced customizations. Some of the features we've built are:
+We are an app development agency that was hired by a client to create a native app from their WordPress. We decided to make the basic Android source code available under GNU so it would be easy for everyone to do the same. We can however support you if you want more advanced customizations. Some of the features we've built are:
 
 * **In-app billing:** You can limit access to tabs or posts based on payment. You can use either one-time purchases or subscriptions to sell your users premium content. The app will ask the user to make a purchase through Google Play Billing before showing the content. We've developed a WordPress plugin that makes it easy for you to mark content as premium from your WordPress admin. Get in touch with us if you would like to use this functionality. 
 
