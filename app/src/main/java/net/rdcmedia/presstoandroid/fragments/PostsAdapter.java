@@ -82,11 +82,14 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.PostViewHold
             }
         });
 
-        postViewHolder.titleTextView.setText(Html.fromHtml(post.getTitle(), Html.FROM_HTML_MODE_COMPACT));
-        String htmlText = post.getSummaryText();
+
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            postViewHolder.titleTextView.setText(Html.fromHtml(post.getTitle(), Html.FROM_HTML_MODE_COMPACT));
+            String htmlText = post.getSummaryText();
             postViewHolder.summaryTextView.setText(Html.fromHtml(htmlText, Html.FROM_HTML_MODE_COMPACT));
         } else {
+            postViewHolder.titleTextView.setText(Html.fromHtml(post.getTitle()));
+            String htmlText = post.getSummaryText();
             postViewHolder.summaryTextView.setText(Html.fromHtml(htmlText));
         }
         if (post.getFeaturedImage() != null) {

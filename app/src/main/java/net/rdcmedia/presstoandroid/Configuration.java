@@ -7,6 +7,10 @@ public class Configuration {
     //The URL for the WordPress Blog
     public static String WORDPRESS_URL = "https://presstoapp.com";
 
+    //If your WordPress instance is not running in the root of the above domain, please add the subfolder below
+    //i.e. https://mywordpressdomain.com/location would enter "/location" below
+    public static String WORDPRESS_LOCATION = "";
+
     //The icons to use for the Tab Bar buttons
     public static String[] TAB_ICONS = {"ic_action_news", "ic_action_list_2", "ic_action_help", "ic_action_dialog"};
 
@@ -20,6 +24,7 @@ public class Configuration {
     public static String[] PAGE_TABS = {"features", "questions", "contact"};
 
     //Configuration Settings
+    public static final int TIME_OUT_SECONDS = 30;
     public static final boolean USE_LAZY_LOADING = true;
     public static final boolean LOAD_LINKS_EXTERNALLY = true;
     public static final boolean REMOVE_WEBTITLE_CONTENT_AFTER_LAST_DASH = true;

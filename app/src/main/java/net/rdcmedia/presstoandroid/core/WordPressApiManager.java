@@ -39,10 +39,11 @@ public class WordPressApiManager extends ViewModel {
         partialObjectList = new ArrayList<>();
 
         urlStrings = new Hashtable<>();
-        urlStrings.put(Page.class, "/wp-json/wp/v2/pages/?per_page=100");
-        urlStrings.put(Category.class, "/wp-json/wp/v2/categories/?per_page=100");
-        urlStrings.put(Media.class, "/wp-json/wp/v2/media/?per_page=100");
-        urlStrings.put(Post.class, "/wp-json/wp/v2/posts/?_embed&per_page=100");
+        urlStrings.put(Page.class, Configuration.WORDPRESS_LOCATION + "/wp-json/wp/v2/pages/?per_page=100");
+        urlStrings.put(Category.class, Configuration.WORDPRESS_LOCATION +  "/wp-json/wp/v2/categories/?per_page=100");
+        urlStrings.put(Media.class, Configuration.WORDPRESS_LOCATION + "/wp-json/wp/v2/media/?per_page=100");
+        urlStrings.put(Post.class, Configuration.WORDPRESS_LOCATION + "/wp-json/wp/v2/posts/?_embed&per_page=100");
+
         currentCall = 1;
 
     }
