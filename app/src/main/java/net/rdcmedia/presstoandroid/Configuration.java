@@ -29,7 +29,7 @@ public class Configuration {
     //Configuration Settings
     public static final int TIME_OUT_SECONDS = 30;
     public static final boolean USE_LAZY_LOADING = true;
-    public static final boolean LOAD_LINKS_EXTERNALLY = false;
+    public static final boolean LOAD_LINKS_EXTERNALLY = true;
     public static final boolean REMOVE_WEBTITLE_CONTENT_AFTER_LAST_DASH = true;
     public static ImmutableMap.Builder<String, String> WEB_ELEMENTS_TO_REMOVE =  ImmutableMap.
             <String, String>builder()
