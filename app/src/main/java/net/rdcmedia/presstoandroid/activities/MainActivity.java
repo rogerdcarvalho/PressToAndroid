@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity implements DataManagerDelega
             tabNames.add(Configuration.POSTS_TAB);
             i += 1;
         }
-        for (String tab : Configuration.PAGE_TABS) {
+        for (String tab : Configuration.PAGE_TAB_NAMES) {
             if (!tab.equals("")) {
                 String tabName = tab.substring(0, 1).toUpperCase() + tab.substring(1);
                 navigation.getMenu().add(Menu.NONE, i, Menu.NONE, tabName).setIcon(getDrawableIdentifier(Configuration.TAB_ICONS[i]));
