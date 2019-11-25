@@ -25,7 +25,7 @@ public class Configuration {
 
     //The names you want to display to the user, they can differ from the real slug names
     public static String[] PAGE_TAB_NAMES = {"features", "questions", "contact"};
-    
+
     //Configuration Settings
     public static final int TIME_OUT_SECONDS = 30;
     public static final boolean USE_LAZY_LOADING = true;
